@@ -20,11 +20,11 @@ PLOT_LABELS <- read.csv("GitHub/avian_flu_sdm_fork/KP/plot_labels.csv")
 # script6: FOLDER, REGION, PERIOD, QUARTERS, MODEL_TYPE, PLOT_LABELS
 # script7: FOLDER, REGION, PERIOD, QUARTERS, MODEL_TYPE
 
-GLOBAL = c("GLOBAL","FOLDER","REGION","PERIOD","QUARTERS","MODEL_TYPE","K_OPT","PLOT_LABELS")
+GLOBAL = c("GLOBAL","clear_R","FOLDER","REGION","PERIOD","QUARTERS","MODEL_TYPE","K_OPT","PLOT_LABELS")
 
 #Clean R session before running next script
 clear_R <- function (x){
-	rm(list = x[!(x%in% GLOBAL)]) # Clear variables not in GLOBAL
+	rm(list = x[!(x%in% GLOBAL)],pos=-1) # Clear variables not in GLOBAL
 	sapply(file.path(tempdir(), list.files(tempdir())), unlink)
 	gc()
 }
