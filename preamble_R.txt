@@ -3,5 +3,28 @@ FOLDER <- "C:/Users/karan/OneDrive - The University of Liverpool/AI_S2_SDM_stora
 
 #REGION <- "RegionAsiaRussia"; PERIOD <- c("A","B"); QUARTERS = c(1,4)
 
-REGION <- "RegionAAmericasNorthCentral"; PERIOD <- c("A","B"); QUARTERS = 1:4
+REGION <- "RegionAmericasNorthCentral"; PERIOD <- c("A","B"); QUARTERS = 1:4
 
+MODEL_TYPE <- c("Base","Cross_Seasonal")
+
+K_OPT <- 2
+
+# Load variable name, label, label units and type if binary
+PLOT_LABELS <- read.csv("GitHub/avian_flu_sdm_fork/KP/plot_labels.csv")
+
+# script1: FOLDER, REGION
+# script2: FOLDER, REGION, PERIOD, QUARTERS
+# script3: FOLDER, REGION, PERIOD, QUARTERS, K_OPTS, MODEL_TYPE
+# script4: FOLDER, REGION, PERIOD, QUARTERS, MODEL_TYPE
+# script5: FOLDER, REGION, PERIOD, QUARTERS, MODEL_TYPE
+# script6: FOLDER, REGION, PERIOD, QUARTERS, MODEL_TYPE, PLOT_LABELS
+# script7: FOLDER, REGION, PERIOD, QUARTERS, MODEL_TYPE
+
+GLOBAL = c("FOLDER","REGION","PERIOD","QUARTERS","MODEL_TYPE","K_OPT","GLOBAL")
+
+#Clean R session before running next script
+clear_R <- function (){
+	rm(list = ls()[!(ls()%in% GLOBAL)] # Clear variables not in GLOBAL
+	sapply(file.path(tempdir(), list.files(tempdir())), unlink)
+	gc()
+}
