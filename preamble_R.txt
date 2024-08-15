@@ -1,5 +1,5 @@
-#FOLDER <- "~/Documents/"
-FOLDER <- "C:/Users/karan/OneDrive - The University of Liverpool/AI_S2_SDM_storage/"
+FOLDER <- "~/Documents/"
+
 
 #REGION <- "RegionAsiaRussia"; PERIOD <- c("A","B"); QUARTERS = c(1,4)
 
