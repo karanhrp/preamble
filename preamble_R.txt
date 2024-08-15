@@ -24,7 +24,7 @@ GLOBAL = c("FOLDER","REGION","PERIOD","QUARTERS","MODEL_TYPE","K_OPT","GLOBAL")
 
 #Clean R session before running next script
 clear_R <- function (){
-	rm(list = ls()[!(ls()%in% GLOBAL)] # Clear variables not in GLOBAL
+	rm(list = ls()[!(ls()%in% GLOBAL)]) # Clear variables not in GLOBAL
 	sapply(file.path(tempdir(), list.files(tempdir())), unlink)
 	gc()
 }
