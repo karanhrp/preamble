@@ -1,0 +1,7 @@
+#FOLDER <- "~/Documents/"
+FOLDER <- "C:/Users/karan/OneDrive - The University of Liverpool/AI_S2_SDM_storage/"
+
+#REGION <- "RegionAsiaRussia"; PERIOD <- c("A","B"); QUARTERS = c(1,4)
+
+REGION <- "RegionAAmericasNorthCentral"; PERIOD <- c("A","B"); QUARTERS = 1:4
+
